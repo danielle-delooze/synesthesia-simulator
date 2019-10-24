@@ -10,6 +10,9 @@
           <el-color-picker size="mini" class="app__colorpicker" v-model="characters[character]"></el-color-picker>
         </div>
       </el-col>
+      <el-col :span="16" class="app__codemirror">
+        <codemirror></codemirror>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -19,7 +22,7 @@ export default {
   name: 'app',
   data: () => {
     return {
-      characters: {A: '', B: '', C:'', D: '', E: '', F: '', G: '', H: '', I: '', J: '', K: '', L: '',
+      characters: {A: '#F40A0A', B: '#FCFAD3', C:'#67D5F7', D: '', E: '', F: '', G: '', H: '', I: '', J: '', K: '', L: '',
       M: '', N: '', O: '', P: '', Q: '', R: '', S: '', T: '', U: '', V: '', W: '', X: '', Y: '', Z: ''}
     }
   }
@@ -51,5 +54,13 @@ export default {
     margin-left: 20px;
     vertical-align: bottom;
   }
+
+  &__codemirror {
+    margin-top: 20px;
+  }
+}
+
+.CodeMirror {
+  text-align: left !important;
 }
 </style>
