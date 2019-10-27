@@ -6,13 +6,13 @@ import locale from 'element-ui/lib/locale/lang/en'
 
 import 'element-ui/lib/theme-chalk/index.css'
 import 'codemirror/lib/codemirror.css'
+import 'codemirror/mode/vue/vue.js'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI, {locale})
 Vue.use(VueCodemirror, {
-  options: { 
-    mode: 'text/javascript',
-    theme: 'base16-dark',
+  options: {
+    mode: 'javascript',
     lineNumbers: true
   }
 })
